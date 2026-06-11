@@ -27,6 +27,12 @@ brew install micahdt/tap/maccages
 
 *To update the app in the future, just run `brew upgrade maccages`!*
 
+### ⚠️ Important: Gatekeeper Fix
+Because Maccages is a free, open-source application, it is not cryptographically signed with an expensive Apple Developer Certificate. On Apple Silicon (M1/M2/M3/M4) Macs, Apple's strict Gatekeeper security system automatically slaps a "Quarantine" flag onto unsigned applications downloaded from the internet (including via Homebrew). This causes macOS to throw an **"App is damaged and can't be opened"** error when you try to launch it. This is a standard macOS security measure for indie software and is completely safe to bypass. To strip the quarantine flag and permanently fix the error, open your Terminal and run:
+```bash
+xattr -cr /Applications/Maccages.app
+```
+
 ### Option 2: Manual Download
 
 1. Go to the **[Releases](https://github.com/micahdt/maccages/releases)** tab and download the latest `Maccages-v#.#.#-mac-arm64.zip`.
