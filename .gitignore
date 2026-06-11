@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+._*
+*.zip
+Maccages.app/
+Maccages-darwin-*/
+icons/
+google-macages-icon.png
+google-messages-logo.png
